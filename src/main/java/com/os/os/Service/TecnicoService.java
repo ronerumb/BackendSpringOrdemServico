@@ -23,7 +23,7 @@ public class TecnicoService {
     public Tecnico findById(Integer id){
 
         Optional<Tecnico> tecnico = tecnicoRepository.findById(id);
-        return tecnico.orElseThrow(() -> new ObjectNotFoundException("Cliente de ID "+id+" não foi encontrado"));
+        return tecnico.orElseThrow(() -> new ObjectNotFoundException("Tecnico de ID "+id+" não foi encontrado"));
 
     }
 
