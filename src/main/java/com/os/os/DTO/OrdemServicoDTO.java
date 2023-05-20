@@ -65,8 +65,8 @@ public class OrdemServicoDTO {
         this.dataFechamento = dataFechamento;
     }
 
-    public Integer getPrioridade() {
-        return prioridade;
+    public Prioridade getPrioridade() {
+        return Prioridade.toEnum(this.prioridade);
     }
 
     public void setPrioridade(Integer prioridade) {
@@ -81,8 +81,8 @@ public class OrdemServicoDTO {
         this.observacoes = observacoes;
     }
 
-    public Integer getStatus() {
-        return status;
+    public Status getStatus() {
+        return Status.toEnum(this.status);
     }
 
     public void setStatus(Integer status) {

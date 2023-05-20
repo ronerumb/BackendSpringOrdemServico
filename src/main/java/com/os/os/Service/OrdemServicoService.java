@@ -40,8 +40,8 @@ public class OrdemServicoService {
     public OrdemServico create(OrdemServicoDTO ordemServicoDTO) {
         OrdemServico ordemServico = new OrdemServico();
         ordemServico.setObservacoes(ordemServicoDTO.getObservacoes());
-        ordemServico.setStatus(Status.toEnum(ordemServicoDTO.getStatus()));
-        ordemServico.setPrioridade(Prioridade.toEnum(ordemServicoDTO.getPrioridade()));
+        ordemServico.setStatus(ordemServicoDTO.getStatus());
+        ordemServico.setPrioridade(ordemServicoDTO.getPrioridade());
         ordemServico.setCliente(clienteService.findById(ordemServicoDTO.getCliente()));
         ordemServico.setTecnico(tecnicoService.findById(ordemServicoDTO.getTecnico()));
         return ordemServicoRepository.save(ordemServico);
@@ -51,8 +51,8 @@ public class OrdemServicoService {
 
         OrdemServico ordemServico = findById(id);
         ordemServico.setObservacoes(ordemServicoDTO.getObservacoes());
-        ordemServico.setStatus(Status.toEnum(ordemServicoDTO.getStatus()));
-        ordemServico.setPrioridade(Prioridade.toEnum(ordemServicoDTO.getPrioridade()));
+        ordemServico.setStatus(ordemServicoDTO.getStatus());
+        ordemServico.setPrioridade(ordemServicoDTO.getPrioridade());
         ordemServico.setCliente(clienteService.findById(ordemServicoDTO.getCliente()));
         ordemServico.setTecnico(tecnicoService.findById(ordemServicoDTO.getTecnico()));
         return ordemServicoRepository.save(ordemServico);
